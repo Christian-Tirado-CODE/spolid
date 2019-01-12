@@ -12,15 +12,17 @@
     />
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Bootstrap Theme</title>
+    <title>Spolid.com</title>
     <!-- website design: https://colorlib.com/demo?theme=colid-->
   </head>
 
   <body>
-    <!-- START HERE -->
-
+    
+                  <!--
+                    YOU STILL NEED TO FIX: MAKE ACCORDION WORK AND CHANGE FEATURES BACKGROUND COLOR 
+                  -->
     <!--NAV-->
-    <nav class="navbar navbar-expand-md fixed-top py-4 navbar-light">
+    <nav  id="main-nav"class="navbar navbar-expand-md fixed-top py-4 navbar-light">
       <div class="container">
         <a href="#home" class="navbar-brand"
           ><h1 class="d-inline text-white">SPOLID</h1></a
@@ -35,14 +37,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
           <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Service</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Team</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="#mainHeader" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#services" class="nav-link">Service</a></li>
+            <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+            <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
+            <li class="nav-item"><a href="#team" class="nav-link">Team</a></li>
+            <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+            <li class="nav-item"><a href="#mainFooter" class="nav-link">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -484,6 +485,24 @@
     <script>
       // Get the current year for the copyright
       $("#year").text(new Date().getFullYear());
+
+
+      //init Scrollspy
+      $('body').scrollspy({target: '#main-nav'});
+      //Smooth Scrolling
+      $("#main-nav a").on('click', function(e){
+        if(this.hash !== ''){
+          e.preventDefault();
+
+          const hash = this.hash;
+
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+            window.location.hash = hash;
+          });
+        }
+      });
     </script>
   </body>
 </html>
