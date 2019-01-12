@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:500");
+$primary: #138fc2;
+$primary-overlay: rgba(117, 203, 231, 0.4);
+$bg-light: #f2fefe;
+//GLOBALS
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: $primary;
+  color: #fff;
+}
+ul {
+  list-style-type: none;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+p {
+  font-size: 0.9rem;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(19, 143, 194, 0.5);
+  height: 100%;
+  width: 100%;
+}
+.container {
+  height: 100%;
+}
+
+.nav-link,
+.nav-item,
+.navbar-light {
+  color: #fff !important;
+}
+.header-btn {
+  border-radius: 30px;
+  background-color: #fff;
+  color: #138fc2;
+  font-size: 0.9rem;
+  font-weight: 100 !important;
+  padding: 0.8rem;
+}
+//NAV
+.navbar-brand {
+  color: #fff;
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+.navbar-collapse {
+  text-align: center;
+}
+// HEADER
+#mainHeader {
+  position: relative;
+  height: 100%;
+  background: url(../img/mountains.jpg) no-repeat center;
+  background-size: cover;
+  .container {
+  }
+}
+//SERVICES
+#services,
+#features {
+  padding: 120px 0;
+  text-align: center;
+  background-color: $bg-light;
+}
+.box {
+  padding: 1rem;
+}
+.box:hover {
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: 2px 2px 4px 4px rgba(lightgrey, $alpha: 0.2);
+  transition: background-color 0.5s, padding 0.5s, box-shadow 0.5s;
+}
+.box-icon {
+  margin-bottom: 50px;
+}
+//FEATURES
+#features {
+}
+//PRICING
+#pricing {
+  text-align: center;
+  background: url(../img/pricing.jpg) no-repeat center;
+  background-size: cover;
+  height: 800px;
+  position: relative;
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    margin-bottom: 1rem;
+  }
+  .btn {
+    border-radius: 20px;
+    color: #fff !important;
+    font-weight: 100;
+  }
+  .btn:hover {
+    background: #fff;
+    color: #138fc2 !important;
+    box-shadow: 2px 4px 5px rgba($color: lightgrey, $alpha: 0.3);
+  }
+}
+
+.card {
+  border: none;
+  padding: 20px;
+}
+.card-header,
+.card-footer {
+  background-color: white;
+}
+.card-header {
+  border-bottom: 1px solid rgba($color: lightgrey, $alpha: 0.4);
+}
+.card-footer {
+  border-top: 1px solid rgba($color: lightgrey, $alpha: 0.4);
+}
+// TEAM
+#team {
+  background: $bg-light;
+  .member {
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 2px 2px 4px 4px rgba(lightgrey, $alpha: 0.2);
+  }
+  img {
+    width: 150px;
+    height: 200px;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 20px;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+}
+//FAQ
+#faq {
+  background-color: $bg-light;
+  h3 {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+  }
+  i {
+    padding: 0.7rem;
+    color: #fff;
+    font-size: 0.8rem;
+  }
+  .panel {
+    border-bottom: 1px solid rgba(211, 211, 211, 0.4);
+    padding: 0.8rem 0;
+  }
+  .panel-icon {
+    background-color: #2f60c3;
+    border-radius: 200px;
+    height: fit-content;
+  }
+}
+// FOOTER
+footer {
+  background: linear-gradient(to bottom, #75cbe7 0%, #138fc2 100%);
+  li {
+    margin-right: 1rem;
+    display: inline;
+  }
+  a {
+  }
+  i {
+    color: #138fc2;
+    margin: 0;
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+  .info-icon {
+    background-color: #fff;
+    border-radius: 200px;
+    height: fit-content;
+    margin-right: 10px;
+  }
+  .footer-middle {
+    i {
+      font-size: 1.2rem;
+      padding: 1rem;
+    }
+  }
+  .social-icon {
+    background-color: #fff;
+    border-radius: 400px;
+    margin-right: 10px;
+    display: inline;
+    height: fit-content;
+  }
+  .footer-bottom {
+    position: relative;
+    bottom: 0;
+  }
+}
+
+//MEDIA QUERIES
+@media (max-width: 768px) {
+  #mainHeader {
+    max-height: 500px;
+    .container {
+      margin: 10% 0 0 0;
+    }
+  }
+  .header-text {
+    margin-top: 50px;
+  }
+  #pricing {
+    background-image: none;
+    height: 1573px;
+    .overlay {
+      height: auto;
+    }
+    .card {
+      margin-bottom: 20px;
+    }
+  }
+}
